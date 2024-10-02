@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+Html,body{
+  background:url(image/shiv-prajapati-7Pi2q0OPM14-unsplash.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.header{
+    background: #ee525e;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 10;
+}
+
+.sidebarIconToggle{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.menu{
+    height: 100%;
+    padding: 10px 50px;
+    margin-top: 50px;
+}
+ #sidebarMenu{
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #2e86de;
+    margin-top: 50px;
+    transform: translateX(-240px);
+   transition: .5s;
+ }
+ #openSidebarMenu:checked ~ #sidebarMenu{
+    transform: translateX(0px);
+ }
+ .menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ .menu li{
+    color:#fff;
+    border-bottom: 1px solid#ddd;
+ }
+ .menu li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+ }
+ .sidebarIconToggle{
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 20;
+   top: 22px;
+   left: 15px;
+   cursor: pointer;
+}
+.spinner{
+   height: 3px;
+   background: #fff;
+   transition: all 0.3s;
+}
+.spinner.middle,
+.spinner.bottom{
+   margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle >.spinner.middle{
+   opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle >.spinner.top{
+   transform: rotate(135deg);
+   margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle >.spinner.bottom{
+   transform: rotate(-135deg);
+   margin-top: -9px;
+}
